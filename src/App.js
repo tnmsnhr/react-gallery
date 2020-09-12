@@ -11,16 +11,19 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(null)
 
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Route path='/' exact component={UploadForm} />
-      <Route path='/' exact render={()=><ImageGrid  setSelectedImage={setSelectedImage}/>} />
-      <Route path='/react-gallery' exact render={()=><ImageGrid  setSelectedImage={setSelectedImage}/>} />
-      {selectedImage && <Modal selectedImage={selectedImage}
-      setSelectedImage={setSelectedImage}/>}
-      
-      <Route path='/liked-shots' component={LikedShots}/>
-    </div>
+      <div className="App">
+        
+        <Route path='/' exact component={UploadForm} />
+        <Route path='/' exact render={()=><ImageGrid  setSelectedImage={setSelectedImage}/>} />
+        <Route path='/react-gallery' exact render={()=><ImageGrid  setSelectedImage={setSelectedImage}/>} />
+        {selectedImage && <Modal selectedImage={selectedImage}
+        setSelectedImage={setSelectedImage}/>}
+        
+        <Route path='/liked-shots' component={LikedShots}/>
+      </div>
+    </>
   );
 }
 

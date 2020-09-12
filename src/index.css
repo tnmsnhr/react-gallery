@@ -2,7 +2,7 @@
 
 
 :root{
-  --primary: #efb6b2;
+  --primary: #4285F4;
   --secondary: #4e4e4e;
   --error: #ff4a4a;
 }
@@ -18,9 +18,10 @@ body{
   color: var(--secondary);
 }
 .App{
-  max-width: 960px;
+  max-width: 80%;
   margin: 0 auto;
 }
+
 .title h1{
   color: var(--primary);
   font-size: 1.2rem;
@@ -47,8 +48,8 @@ label input{
 }
 label{
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border: 1px solid var(--primary);
   border-radius: 50%;
   margin: 10px auto;
@@ -57,6 +58,12 @@ label{
   font-weight: bold;
   font-size: 24px;
   cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+label span {
+  position: relative;
+  top: 5px;
+  font-size: 2em;
 }
 label:hover{
   background: var(--primary);
