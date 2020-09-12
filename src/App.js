@@ -15,6 +15,7 @@ function App() {
       <Navbar />
       <Route path='/' exact component={UploadForm} />
       <Route path='/' exact render={()=><ImageGrid  setSelectedImage={setSelectedImage}/>} />
+      <Route path='/react-gallery' exact render={()=><ImageGrid  setSelectedImage={setSelectedImage}/>} />
       {selectedImage && <Modal selectedImage={selectedImage}
       setSelectedImage={setSelectedImage}/>}
       
